@@ -37,20 +37,22 @@ This project aims to support visually impaired individuals by providing a smart 
   
 ## Project Structure
 smart-glasses-for-blind/
-├── main.py                 # Main entry point
-├── config.py               # System configuration
-├── requirements.txt        # Required libraries
-├── hardware/               # Hardware interface modules
+├── main.py                     # Main entry point
+├── config.py                   # System configuration
+├── requirements.txt            # Required libraries
+├── hardware/                   # Hardware interface modules
 │   ├── __init__.py
-│   ├── gpio_controller.py  # GPIO pin management
-│   ├── servo_motor.py      # Servo motor control
-│   ├── ultrasonic.py       # Ultrasonic sensor functions
-│   └── buzzer_led.py       # Audio and visual feedback
-├── core/                   # Core functionality
+│   ├── gpio_controller.py      # GPIO pin management
+│   ├── servo_motor.py          # Servo motor control
+│   ├── ultrasonic.py           # Ultrasonic sensor functions
+│   └── buzzer_led.py           # Audio and visual feedback
+├── core/                       # Core functionality
 │   ├── __init__.py
-│   ├── scanner.py          # Main scanning system
-│   ├── direction.py        # Direction detection
-│   └── button_handler.py   # Button input processing
-└── database/               # Data storage
+│   ├── scanner.py              # Main scanning system
+│   ├── direction.py            # Direction detection
+│   └── button_handler.py       # Button input processing
+└── database/                   # Data storage
+    ├── __init__.py
+    └── db_manager.py           # Database operations
     ├── __init__.py
     └── db_manager.py       # Database operations
