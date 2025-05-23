@@ -15,16 +15,16 @@ PINS = {
 
 # Distance Detection Settings
 DISTANCE = {
-    'THRESHOLD': 20,      # Alarm distance threshold (cm)
+    'THRESHOLD': 50,      # Alarm distance threshold (cm)
     'MIN_VALID': 2,      # Minimum valid distance (cm)
     'MAX_VALID': 400     # Maximum valid distance (cm)
 }
 
 # Servo Motor Settings
 SERVO = {
-    'MIN_ANGLE': 75,     # Minimum angle
-    'MAX_ANGLE': 145,    # Maximum angle
-    'STEP': 3,           # Angle step size
+    'MIN_ANGLE': 76,     # Minimum angle
+    'MAX_ANGLE': 164,    # Maximum angle
+    'STEP': 2,           # Angle step size
     'SPEED_DELAY': 0.1,  # Movement speed delay (seconds)
     'PWM_FREQUENCY': 50  # PWM frequency (Hz)
 }
@@ -51,11 +51,11 @@ DB_PATH = os.path.join(DATABASE['FOLDER'], DATABASE['FILE'])
 # Direction Detection Settings
 DIRECTION = {
     'ZONES': {
-        'FAR_LEFT': {'min': 111, 'max': 180, 'code': 4, 'name': 'FAR_LEFT'},
-        'LEFT': {'min': 91, 'max': 110, 'code': 2, 'name': 'LEFT'},
-        'FRONT': {'min': 89, 'max': 91, 'code': 3, 'name': 'FRONT'},
-        'RIGHT': {'min': 71, 'max': 89, 'code': 1, 'name': 'RIGHT'},
-        'FAR_RIGHT': {'min': 0, 'max': 70, 'code': 5, 'name': 'FAR_RIGHT'}
+        'FAR_LEFT': {'min': 150, 'max': 180, 'code': 4, 'name': 'FAR_LEFT'},
+        'LEFT': {'min': 138, 'max': 150, 'code': 2, 'name': 'LEFT'},
+        'FRONT': {'min': 124, 'max': 138, 'code': 3, 'name': 'FRONT'},
+        'RIGHT': {'min': 100, 'max': 124, 'code': 1, 'name': 'RIGHT'},
+        'FAR_RIGHT': {'min': 0, 'max': 90, 'code': 5, 'name': 'FAR_RIGHT'}
     },
     'BEEP_PATTERNS': {
         1: [(0.1, 0.05)],  # RIGHT - 1 short beep
