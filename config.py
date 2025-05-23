@@ -55,7 +55,7 @@ DIRECTION = {
         'LEFT': {'min': 138, 'max': 150, 'code': 2, 'name': 'LEFT'},
         'FRONT': {'min': 124, 'max': 138, 'code': 3, 'name': 'FRONT'},
         'RIGHT': {'min': 100, 'max': 124, 'code': 1, 'name': 'RIGHT'},
-        'FAR_RIGHT': {'min': 0, 'max': 90, 'code': 5, 'name': 'FAR_RIGHT'}
+        'FAR_RIGHT': {'min': 0, 'max': 100, 'code': 5, 'name': 'FAR_RIGHT'}
     },
     'BEEP_PATTERNS': {
         1: [(0.1, 0.05)],  # RIGHT - 1 short beep
