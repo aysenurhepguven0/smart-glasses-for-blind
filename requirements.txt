@@ -1,0 +1,15 @@
+# Required Libraries
+
+# Raspberry Pi GPIO control
+RPi.GPIO>=0.7.0
+
+# For database operations (built-in)
+# sqlite3
+
+# For file and folder operations (built-in)
+# pathlib
+# os
+# datetime
+# time
+
+# Note: RPi.GPIO only works on Raspberry Pi
