@@ -4,35 +4,53 @@ This project aims to support visually impaired individuals by providing a smart 
 
 ## Features
 
-- **Distance measurement** using an HC-SR04 ultrasonic sensor  
-- **Alerts via LED and buzzer** when objects are detected closer than a set threshold (100 cm)  
-- **SQLite database logging** (timestamp, distance, alert status)  
-- **Displays last 10 entries** and statistics every 30 measurements  
-- **Startup and shutdown melodies** with LED and buzzer feedback  
+- **Directional object detection** with servo-mounted ultrasonic sensor
+- **Multi-directional alerts** with unique beep patterns for each direction
+- **Dual operation modes**:
+  - Automatic scanning: continuously scans the environment
+  - Manual mode: provides focused detection in a single direction
+- **Button control interface** with short/long press functionality
+- **Database logging** of measurements and system events
+- **Real-time dashboard** showing recent measurements and statistics
 
 ## Hardware Requirements
 
-- Raspberry Pi 5  
-- HC-SR04 Ultrasonic Sensor  
-- LED  
-- Buzzer  
-- Jumper wires  
+- Raspberry Pi
+- HC-SR04 ultrasonic sensor
+- SG90 servo motor
+- LED and status LED
+- Buzzer
+- Push button
+- Jumper wires
 
 ## Installation
 
 1. Install required Python libraries:
-    ```bash
-    sudo apt update
-    sudo apt install python3-rpi.gpio
-    ```
-
-2. Clone the repository and run the main script:
-    ```bash
-    python3 main.py
-    ```
+   ```bash
+   sudo apt update
+   sudo apt install python3-rpi.gpio
 
 ## File Structure
 
 - Measurement records are stored at:  
   `/home/ceren/Proje/records/measurements.db`
-
+  
+## Project Structure
+smart-glasses-for-blind/
+├── main.py                 # Main entry point
+├── config.py               # System configuration
+├── requirements.txt        # Required libraries
+├── hardware/               # Hardware interface modules
+│   ├── __init__.py
+│   ├── gpio_controller.py  # GPIO pin management
+│   ├── servo_motor.py      # Servo motor control
+│   ├── ultrasonic.py       # Ultrasonic sensor functions
+│   └── buzzer_led.py       # Audio and visual feedback
+├── core/                   # Core functionality
+│   ├── __init__.py
+│   ├── scanner.py          # Main scanning system
+│   ├── direction.py        # Direction detection
+│   └── button_handler.py   # Button input processing
+└── database/               # Data storage
+    ├── __init__.py
+    └── db_manager.py       # Database operations
