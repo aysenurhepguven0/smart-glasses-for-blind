@@ -36,7 +36,8 @@ This project aims to support visually impaired individuals by providing a smart 
   `/home/ceren/Proje/records/measurements.db`
   
 ## Project Structure
- `smart-glasses-for-blind/
+```bash
+ smart-glasses-for-blind/
 
 ├── main.py                     # Main entry point
 ├── config.py                   # System configuration
@@ -56,4 +57,4 @@ This project aims to support visually impaired individuals by providing a smart 
     ├── __init__.py
     └── db_manager.py           # Database operations
     ├── __init__.py
-    └── db_manager.py       # Database operations`
+    └── db_manager.py       # Database operations
