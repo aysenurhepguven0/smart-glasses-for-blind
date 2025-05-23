@@ -58,3 +58,53 @@ This project aims to support visually impaired individuals by providing a smart 
     └── db_manager.py           # Database operations
     ├── __init__.py
     └── db_manager.py       # Database operations
+SQLite3 Command Line (Terminal)
+
+You can interact with the local database using the SQLite3 terminal interface.
+
+### Database
+
+```bash
+sqlite3 /home/ceren/Proje/records/measurements.db
+
+-- List all tables
+.tables
+
+-- Show table schema
+.schema measurements
+
+-- Show column headers
+.headers on
+
+-- Format output as columns
+.mode column
+
+-- Show last 10 measurements
+SELECT * FROM measurements ORDER BY id DESC LIMIT 10;
+
+-- Show only alarm-triggered measurements
+SELECT date_time, distance, angle, direction 
+FROM measurements 
+WHERE alert_status = 1 
+ORDER BY date_time DESC;
+
+-- Count alarms by direction
+SELECT direction, COUNT(*) as alarm_count 
+FROM measurements 
+WHERE alert_status = 1 
+GROUP BY direction 
+ORDER BY alarm_count DESC;
+
+-- Daily statistics
+SELECT 
+    DATE(date_time) as date,
+    COUNT(*) as total_measurements,
+    COUNT(CASE WHEN alert_status = 1 THEN 1 END) as alerts,
+    AVG(distance) as avg_distance
+FROM measurements 
+GROUP BY DATE(date_time) 
+ORDER BY date DESC;
+
+-- Exit the SQLite shell
+.quit
+
